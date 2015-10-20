@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html">
+	
+    <h:head>
+        
+    </h:head>
+    <h:body>
+    	<h2>Please select one menu</h2>
+    	<h:form>
+    	   <h:selectOneMenu id="mycountry" value="#{listenerBean.country}">
+    	   <f:ajax execute="mycountry" render="text2"></f:ajax>
+    	    <f:selectItems value="#{listenerBean.countryInMap}">
+    	    </f:selectItems>
+    	   </h:selectOneMenu>
+    	   <h2>The selected country code is  </h2>
+    	   <h:outputText id="text2" value="#{listenerBean.country}" size="20" />
+    	</h:form>
+    </h:body>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+    <h:body>
+    <h:form>
+        User Name : <h:inputText id="user" required="true" requiredMessage="User is required" immediate="true"></h:inputText> <h:message id="usererror" for="user" style="color:red"></h:message><br></br>
+        Password : <h:inputSecret id="password" required="true" requiredMessage="Password is required" ></h:inputSecret><h:message id="passerror" for="password" style="color:red"></h:message><br></br>
+		<h:commandButton type="submit" value="login" action="#{loginBean.doLogin}"/>
+		<h:commandButton type="submit" value="reset" action="#{loginBean.doReset}" immediate="true"/>
+		<h:commandButton type="submit" value="forgotpassword" action="#{loginBean.forgotPass}" immediate="true"></h:commandButton>
+		</h:form>
+				
+    </h:body>
+</html>
